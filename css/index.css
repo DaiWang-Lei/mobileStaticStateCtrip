@@ -1,0 +1,357 @@
+                body {
+                    max-width: 540px;
+                    min-width: 320px;
+                    margin: 0 auto;
+                    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+                    color: #000;
+                    background: #f2f2f2;
+                    overflow-x: hidden;
+                    -webkit-tap-highlight-color: transparent;
+                    height: 2000px;
+                }
+                
+                ul,
+                ul li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                a {
+                    text-decoration: none;
+                    color: #222;
+                }
+                
+                div {
+                    box-sizing: border-box;
+                }
+                
+                .search-index {
+                    display: flex;
+                    /* 固定定位跟父级没有关系，他以屏幕为准 */
+                    position: fixed;
+                    top: 0;
+                    left: 50%;
+                    /* 固定盒子应该有宽度 */
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    width: 100%;
+                    max-width: 540px;
+                    min-width: 320px;
+                    height: 44px;
+                    align-items: center;
+                    background-color: #F6f6f6;
+                    border-top: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+                }
+                
+                .search::before {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    width: 15px;
+                    height: 15px;
+                    background: url(../image/sprite.png) no-repeat -59px -279px;
+                    background-size: 104px auto;
+                }
+                
+                .search {
+                    position: relative;
+                    height: 26px;
+                    border: 1px solid #ccc;
+                    flex: 1;
+                    background-color: white;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    color: #666;
+                    margin: 7px 10px;
+                    line-height: 24px;
+                    padding-left: 25px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+                }
+                
+                .user::before {
+                    content: '';
+                    display: block;
+                    width: 23px;
+                    height: 23px;
+                    background: url(../image/sprite.png) no-repeat -59px -194px;
+                    background-size: 104px auto;
+                    margin: 4px auto -2px;
+                }
+                
+                .user {
+                    width: 44px;
+                    height: 44px;
+                    font-size: 12px;
+                    text-align: center;
+                    color: #2eaae0;
+                }
+                /* 焦点图 */
+                
+                .focus img {
+                    padding-top: 44px;
+                    width: 100%;
+                }
+                /* 局部导航栏 */
+                
+                .local-nav {
+                    padding-left: 0;
+                    display: flex;
+                    height: 64px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    margin: 3px 4px;
+                }
+                
+                .local-nav li {
+                    flex: 1;
+                }
+                
+                .local-nav a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 10px;
+                    font-size: 12px;
+                }
+                
+                .local-nav li [class^='local-nav-i'] {
+                    width: 32px;
+                    height: 32px;
+                    background-color: orange;
+                    background: url(../image/localnav_bg.png) no-repeat 0 0;
+                    background-size: 32px auto;
+                }
+                
+                .local-nav li .local-nav-i-i2 {
+                    background-position: 0 -128px;
+                }
+                
+                .local-nav li .local-nav-i-i3 {
+                    background-position: 0 -64px;
+                }
+                
+                .local-nav li .local-nav-i-i4 {
+                    background-position: 0 -32px;
+                }
+                
+                .local-nav li .local-nav-i-i5 {
+                    background-position: 0 -96px;
+                }
+                
+                nav {
+                    overflow: hidden;
+                    border-radius: 5px;
+                    margin: 0 4px 3px;
+                }
+                
+                .nav-common:nth-child(2) {
+                    margin: 4px auto;
+                }
+                
+                .nav-common {
+                    display: flex;
+                    height: 88px;
+                    width: 100%;
+                    background-color: orange;
+                }
+                
+                .nav-items {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .nav-items:nth-child(-n+2) {
+                    border-right: 1px solid #fff;
+                }
+                
+                .nav-items a {
+                    flex: 1;
+                    line-height: 44px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 14px;
+                    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+                }
+                
+                .nav-items a:nth-child(1) {
+                    border-bottom: 1px solid #fff;
+                }
+                
+                .nav-items:nth-child(1) a {
+                    border-bottom: 0;
+                    background: url(../image/hotel.png) no-repeat bottom center;
+                    background-size: 121px auto;
+                }
+                
+                .nav-common:nth-child(1) {
+                    background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+                }
+                
+                .nav-common:nth-child(2) {
+                    background: -webkit-linear-gradient(left, #4b90ed, #53bced);
+                }
+                
+                .nav-common:nth-child(3) {
+                    background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
+                }
+                
+                .subnav-entry {
+                    display: flex;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    margin: 0 4px;
+                    flex-wrap: wrap;
+                    padding: 5px 0;
+                }
+                
+                .subnav-entry li {
+                    flex: 20%;
+                }
+                
+                .subnav-entry a {
+                    display: flex;
+                    font-size: 12px;
+                    color: #222;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .subnav-entry li [class^="subnav-entry-i"] {
+                    width: 28px;
+                    height: 28px;
+                    background: url(../image/download.png) no-repeat 0 0;
+                    background-size: 28px auto;
+                }
+                
+                .subnav-entry li .subnav-entry-i-i2 {
+                    background-position: 0 -28px;
+                }
+                
+                .subnav-entry li .subnav-entry-i-i3 {
+                    background-position: 0 -56px;
+                }
+                
+                .subnav-entry li .subnav-entry-i-i4 {
+                    background-position: 0 -84px;
+                }
+                
+                .subnav-entry li .subnav-entry-i-i5 {
+                    background-position: 0 -112px;
+                }
+                
+                .subnav-entry li .subnav-entry-i-i6 {
+                    background-position: 0 -140px;
+                }
+                
+                .subnav-entry li .subnav-entry-i-i7 {
+                    background-position: 0 -168px;
+                }
+                
+                .subnav-entry li .subnav-entry-i-i8 {
+                    background-position: 0 -196px;
+                }
+                
+                .subnav-entry li .subnav-entry-i-i9 {
+                    background-position: 0 -224px;
+                }
+                
+                .subnav-entry li .subnav-entry-i-i10 {
+                    background-position: 0 -252px;
+                }
+                
+                .sales-box {
+                    margin: 4px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    border: 1px solid #dbdbdb;
+                }
+                
+                .sales-hd {
+                    position: relative;
+                    height: 44px;
+                    border-bottom: 1px solid #ccc;
+                }
+                
+                .sales-hd h2 {
+                    position: relative;
+                    text-indent: -999px;
+                    overflow: hidden;
+                }
+                
+                .sales-hd h2::after {
+                    position: absolute;
+                    top: 8px;
+                    left: 20px;
+                    content: '';
+                    width: 79px;
+                    height: 15px;
+                    background: url(../image/hot.png) no-repeat;
+                    background-size: 79px auto;
+                    background-position: 0 -19px;
+                }
+                
+                .sales-hd a {
+                    position: absolute;
+                    right: 8px;
+                    top: 0;
+                    background: -webkit-linear-gradient(left, #ff4e63, #ff6cc9);
+                    border-radius: 15px;
+                    padding: 3px 20px 3px 10px;
+                    font-size: 12px;
+                    color: #fff;
+                }
+                
+                .sales-hd a::after {
+                    position: absolute;
+                    top: 9px;
+                    right: 9px;
+                    content: '';
+                    height: 7px;
+                    width: 7px;
+                    border: 2px solid #fff;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(-45deg);
+                }
+                
+                .row {
+                    display: flex;
+                }
+                
+                .row a {
+                    flex: 1;
+                    border-bottom: 1px solid #eee;
+                }
+                
+                .row a:nth-child(1) {
+                    border-right: 1px solid #eee;
+                }
+                
+                .row a img {
+                    width: 100%;
+                }
+                
+                .tool {
+                    display: flex;
+                }
+                
+                .tool a {
+                    flex: 1;
+                    font-size: 12px;
+                    color: #333;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px 0;
+                }
+                
+                .tool a [class^="tool-i"] {
+                    width: 20px;
+                    height: 20px;
+                    background: url(../image/sprite.png) no-repeat -145px -160px;
+                    /* background-size: 20px auto; */
+                    margin-bottom: 2px;
+                }
